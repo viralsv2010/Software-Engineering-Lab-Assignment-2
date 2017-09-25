@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="SE Lab Assignment 1 09242017">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="SE_Lab_Assignment_1_09242017"/>
+        <property name="java-output-path" value="/SE Lab Assignment 1 09242017/build/classes"/>
+    </wb-module>
+</project-modules>
