@@ -34,44 +34,45 @@
 			    <tbody>
 			      <tr>
 			        <th><label for="firstname">First Name ::</label></th>
-			        <th><h:inputText id="firstname" value="#{firstname}" required="true" requiredMessage="Firstname is required." class="form-control" a:placeholder="First Name" ></h:inputText></th>
+			        <th><h:inputText id="firstname" value="#{LoginBean.firstname}" required="true" requiredMessage="Firstname is required." class="form-control" a:placeholder="First Name" ></h:inputText></th>
 			      </tr>
 			      <h:message for="firstname" styleClass="error" style="color:red"></h:message><br></br>
 			    </tbody>
 			    <tbody>
 			      <tr>
 			        <th><label for="lastname">Last Name ::</label></th>
-			        <td><h:inputText id="lastname" value="#{lastname}" required="true"  requiredMessage="LastName is required." class="form-control"  a:placeholder="Last Name" ></h:inputText></td>
+			        <td><h:inputText id="lastname" value="#{LoginBean.lastname}" required="true"  requiredMessage="LastName is required." class="form-control"  a:placeholder="Last Name" ></h:inputText></td>
 			      </tr>
 			      <h:message for="lastname" styleClass="error" style="color:red"></h:message><br></br>
 			      <tr>
 			        <th><label for="address">Address ::</label></th>
-			        <td><h:inputText id="address" value="#{address}" required="true" requiredMessage="Address is required." class="form-control"   a:placeholder="P.O. BOX 123" ></h:inputText></td>
+			        <td><h:inputText id="address" value="#{LoginBean.address}" required="true" requiredMessage="Address is required." class="form-control"   a:placeholder="P.O. BOX 123" ></h:inputText></td>
 			      </tr>
 			      <h:message for="address" styleClass="error" style="color:red"></h:message><br></br>
 			      <tr>
 			        <th><label for="phonenumber">Phone Number ::</label></th>
-			        <td><h:inputText id="phonenumber" value="#{phonenumber}" required="true" maxlength="10" requiredMessage="PhoneNumber is required." class="form-control"  a:placeholder="9999999999" ><f:validateLength minimum="10" maximum="10" /></h:inputText></td>
+			        <td><h:inputText id="phonenumber" value="#{LoginBean.phonenumber}" required="true" maxlength="10" requiredMessage="PhoneNumber is required." class="form-control"  a:placeholder="9999999999" ><f:validateLength minimum="10" maximum="10" /></h:inputText></td>
 			      </tr>
 			      <h:message for="phonenumber" styleClass="error" style="color:red"></h:message><br></br>
 			      <tr>
 			        <th><label for="personalemail">Personal Email ::</label></th>
-			        <td><h:inputText id="personalemail" value="#{personalemail}" required="true" requiredMessage="Email Address is required." class="form-control"   a:placeholder="Email Address"  validatorMessage="Invalid Email Address"> <f:validateRegex pattern="[a-zA-Z0-9]+@[a-zA-Z]+.[a-zA-Z]{2,3}"></f:validateRegex></h:inputText></td>
+			        <td><h:inputText id="personalemail" value="#{LoginBean.email}" required="true" requiredMessage="Email Address is required." class="form-control"   a:placeholder="Email Address"  validatorMessage="Invalid Email Address"> <f:validateRegex pattern="[a-zA-Z0-9]+@[a-zA-Z]+.[a-zA-Z]{2,3}"></f:validateRegex></h:inputText></td>
 			      </tr>
 			      <h:message for="personalemail" styleClass="error" style="color:red"></h:message><br></br>
 			      <tr>
 			        <th><label for="username">Username ::</label></th>
-			        <td><h:inputText id="username" value="#{username}" required="true" requiredMessage="Username is required." class="form-control"  a:placeholder="User Name" ></h:inputText></td>
+			        <td><h:inputText id="username" value="#{LoginBean.username}" required="true" requiredMessage="Username is required." class="form-control"  a:placeholder="User Name" ></h:inputText></td>
 			      </tr>
 			      <h:message for="username" styleClass="error" style="color:red"></h:message><br></br>
 			      <tr>
 			        <th><label for="password">Password ::</label></th>
-			        <td><h:inputText id="password" value="#{password}" required="true" requiredMessage="Password is required." class="form-control"  a:placeholder="Password" ></h:inputText></td>
+			        <td><h:inputSecret id="password" value="#{LoginBean.password}" required="true" requiredMessage="Password is required." class="form-control"  a:placeholder="Password" ></h:inputSecret></td>
 			      </tr>
 			      <h:message for="password" styleClass="error" style="color:red"></h:message><br></br>
 			      <tr>
 			      	<th></th>
-			        <td><h:commandButton style="background:#50A7E6;color:white" value="Register" action="RegistrationSuccessful" class="btn btn-info loginmodal-submit"></h:commandButton></td>
+			        <td><h:commandButton id="Register" style="background:#50A7E6;color:white" value="Register" action="#{LoginBean.addUser}" class="btn btn-info loginmodal-submit"></h:commandButton></td>
+			        <h:message for="Register" styleClass="error" style="color:red"></h:message><br></br>
 			      </tr>
 			      
 

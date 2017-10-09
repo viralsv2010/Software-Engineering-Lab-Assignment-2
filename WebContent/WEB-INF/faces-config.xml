@@ -13,14 +13,9 @@
 	<navigation-rule>
 		<from-view-id>/Login.xhtml</from-view-id>
 		<navigation-case>
-	       <from-action>#{LoginBean.ValidateUser}</from-action>
-	       <from-outcome>matched</from-outcome>
+	       <from-action>#{LoginBean.checkLogin}</from-action>
+	       <from-outcome>validLogin</from-outcome>
 	       <to-view-id>LoginSuccessful.xhtml</to-view-id>
-		</navigation-case>
-		<navigation-case>
-			<from-action>#{LoginBean.ValidateUser}</from-action>
-			<from-outcome>unmatched</from-outcome>
-			<to-view-id>LoginFailed.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 </faces-config>

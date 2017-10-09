@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15061080845440" configfile="/SE Lab Assignment 1 09242017/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="Login.xhtml" x="122" y="370" id="pf15061987501821" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf15061987502652 pf15061987502813" path="/Login.xhtml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15061080845440" configfile="/SE Lab Assignment 2 10082017/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="Login.xhtml" x="122" y="370" id="pf15061987501821" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf15061987502652" path="/Login.xhtml"/>
   <nodes xsi:type="pageflow:PFPage" name="LoginSuccessful.xhtml" x="338" y="178" id="pf15061987503184" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf15061987502652" path="LoginSuccessful.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" x="338" y="562" id="pf15061987503185" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf15061987502813" path="LoginFailed.xhtml"/>
-  <links id="pf15061987502652" target="pf15061987503184" source="pf15061987501821" outcome="matched" fromaction="#{LoginBean.ValidateUser}"/>
-  <links id="pf15061987502813" target="pf15061987503185" source="pf15061987501821" outcome="unmatched" fromaction="#{LoginBean.ValidateUser}"/>
+  <links id="pf15061987502652" target="pf15061987503184" source="pf15061987501821" outcome="validLogin" fromaction="#{LoginBean.checkLogin}"/>
 </pageflow:Pageflow>
